@@ -11,6 +11,18 @@ public class Zadanie1 {
         Uwaga!
         W zadaniu nie możesz użyć żadnej dodatkowej tablicy!
         */
-        char [] doOdwrocenia = {'a', 'b', 'c', 'd'};
+        char[] doOdwrocenia = {'a', 'b', 'c', 'd'};
+
+        // zamiana
+        for (int i = 0; i < doOdwrocenia.length / 2; i++) {
+            char tmp = doOdwrocenia[i];
+            doOdwrocenia[i] = doOdwrocenia[doOdwrocenia.length - 1 -i];
+            doOdwrocenia[doOdwrocenia.length - 1 -i] = tmp;
+        }
+        // wypisanie odwroconej tablicy
+        for (int i = 0; i < doOdwrocenia.length; i++) {
+            System.out.print(doOdwrocenia[i] + " ");
+        }
+
     }
 }
