@@ -10,5 +10,19 @@ public class Zadanie2 {
         Co to palindrom w skrócie?
         Wyrażenie brzmiące tak samo czytane od lewej do prawej i od prawej do lewej.
          */
+        int [] tab = {1, 2, 3, 4, 4, 3, 2, 1};
+        /*
+        0 vs ostatni (7) - i = 0; tab.length - 1 = 7
+        1 vs 6 - i = 1; tab.length - 1 - i = 6
+        2 vs 5 - i = 2; tab.length - 1 i 2 = 5
+
+         */
+        boolean palindrom = true;
+        for (int i = 0; i < tab.length / 2; i++) {
+            if (tab[i] != tab[tab.length - 1 - i]) {
+                palindrom = false;
+            }
+        }
+        System.out.println(palindrom);
     }
 }
